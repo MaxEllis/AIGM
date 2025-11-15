@@ -11,6 +11,8 @@ export default function SessionScreen({ onBack }) {
   const recognitionRef = useRef(null);
   const synthRef = useRef(null);
   const isHushedRef = useRef(false);
+  const isHoldingRef = useRef(false); // Track if user is holding the button
+  const recognitionActiveRef = useRef(false); // Track if recognition is currently active
 
   // Keep hushed ref in sync for TTS callbacks
   useEffect(() => {
@@ -53,24 +55,49 @@ export default function SessionScreen({ onBack }) {
     recognitionRef.current.lang = 'en-US';
     recognitionRef.current.interimResults = false;
     recognitionRef.current.maxAlternatives = 1;
+    recognitionRef.current.continuous = false; // Set to false for push-to-talk
 
     // Handler: recognition started
     recognitionRef.current.onstart = () => {
       console.log('[SR] onstart');
+      recognitionActiveRef.current = true;
       setListening(true);
       setError(null);
     };
 
     // Handler: recognition ended
     recognitionRef.current.onend = () => {
-      console.log('[SR] onend');
+      console.log('[SR] onend, isHolding:', isHoldingRef.current);
+      recognitionActiveRef.current = false;
       setListening(false);
+      
+      // If user is still holding the button, restart recognition
+      if (isHoldingRef.current && recognitionRef.current) {
+        console.log('[SR] Restarting recognition because user is still holding');
+        try {
+          // Small delay to avoid immediate restart issues
+          setTimeout(() => {
+            if (isHoldingRef.current && recognitionRef.current) {
+              recognitionRef.current.start();
+            }
+          }, 100);
+        } catch (e) {
+          console.error('[SR] Error restarting recognition:', e);
+          // If restart fails, user can release and press again
+        }
+      }
     };
 
     // Handler: recognition error
     recognitionRef.current.onerror = (event) => {
       console.log('[SR] onerror:', event.error);
+      recognitionActiveRef.current = false;
       setListening(false);
+      
+      // If user is still holding, stop holding state on critical errors
+      if (event.error === 'not-allowed' || event.error === 'audio-capture' || event.error === 'network') {
+        isHoldingRef.current = false;
+      }
       
       let errorMessage = null;
       // Only show errors for critical issues, not transient ones
@@ -78,9 +105,9 @@ export default function SessionScreen({ onBack }) {
         // Don't show error for no-speech - it's normal when user doesn't speak
         errorMessage = null;
       } else if (event.error === 'audio-capture') {
-        errorMessage = 'Microphone not found or not accessible.';
+        errorMessage = 'Microphone not found or not accessible. Please check your microphone settings.';
       } else if (event.error === 'not-allowed') {
-        errorMessage = 'Microphone permission denied.';
+        errorMessage = 'Microphone permission denied. Please allow microphone access in your browser settings and refresh the page.';
       } else if (event.error === 'network') {
         errorMessage = 'Internet connection required. Speech recognition needs network access.';
       } else if (event.error === 'aborted') {
@@ -169,34 +196,54 @@ export default function SessionScreen({ onBack }) {
 
   // Start listening function
   const startListening = () => {
-    console.log('[SR] startListening() called');
+    console.log('[SR] startListening() called, recognitionActive:', recognitionActiveRef.current);
     
     if (!speechSupported || !recognitionRef.current) {
       setError('Speech recognition is not available in this browser.');
       return;
     }
 
+    isHoldingRef.current = true;
     setError(null);
 
-    try {
-      recognitionRef.current.start();
-    } catch (e) {
-      console.error('[SR] start() error:', e);
-      setError('Could not start listening: ' + e.message);
+    // Only start if not already active
+    if (!recognitionActiveRef.current) {
+      try {
+        recognitionRef.current.start();
+      } catch (e) {
+        console.error('[SR] start() error:', e);
+        // Handle "already started" error gracefully
+        if (e.message && e.message.includes('already started')) {
+          console.log('[SR] Recognition already started, continuing...');
+          recognitionActiveRef.current = true;
+          setListening(true);
+        } else {
+          setError('Could not start listening: ' + e.message);
+          isHoldingRef.current = false;
+        }
+      }
+    } else {
+      console.log('[SR] Recognition already active, skipping start');
     }
   };
 
   // Stop listening function
   const stopListening = () => {
-    console.log('[SR] stopListening() called');
+    console.log('[SR] stopListening() called, recognitionActive:', recognitionActiveRef.current);
+    
+    isHoldingRef.current = false;
     
     if (!recognitionRef.current) return;
 
-    try {
-      recognitionRef.current.stop();
-    } catch (e) {
-      console.error('[SR] stop() error:', e);
-      // Swallow errors during stop
+    if (recognitionActiveRef.current) {
+      try {
+        recognitionRef.current.stop();
+        recognitionActiveRef.current = false;
+      } catch (e) {
+        console.error('[SR] stop() error:', e);
+        // Swallow errors during stop
+        recognitionActiveRef.current = false;
+      }
     }
   };
 
