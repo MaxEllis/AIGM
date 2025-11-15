@@ -17,6 +17,10 @@ dist-ssr
 .env.local
 .env.*.local
 
+# Rulebooks (large PDF files)
+rulebooks/
+*.pdf
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
