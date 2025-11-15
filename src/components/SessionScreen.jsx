@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { findRule } from '../rules/catanRules';
+import { askRulebook } from '../services/rulesClient';
 
 export default function SessionScreen({ onBack }) {
   // State and refs
@@ -201,7 +201,8 @@ export default function SessionScreen({ onBack }) {
     };
 
     // Handler: recognition result
-    recognitionRef.current.onresult = (event) => {
+    // Made async to handle backend API call
+    recognitionRef.current.onresult = async (event) => {
       console.log('[SR] onresult');
       const lastResult = event.results[event.results.length - 1];
       const query = lastResult[0].transcript;
@@ -209,15 +210,15 @@ export default function SessionScreen({ onBack }) {
       // Add user message to transcript
       setTranscript(prev => [...prev, { type: 'user', text: query }]);
       
-      // Find matching rule
-      const match = findRule(query);
-      
-      if (match && match.rule) {
-        const answer = match.rule.answer;
-        // Limit to 3 sentences
+      try {
+        // Call backend RAG endpoint instead of local findRule
+        const response = await askRulebook(query, { gameId: 'catan-base' });
+        let answer = response.answer || "I couldn't find a matching rule in the rulebook excerpts.";
+        
+        // Safety net: enforce 3 sentence limit on client side
         const allSentences = answer.split(/[.!?]+/).filter(s => s.trim().length > 0);
         const limitedSentences = allSentences.slice(0, 3);
-        const limitedAnswer = limitedSentences.join('. ') + '.';
+        const limitedAnswer = limitedSentences.join('. ') + (limitedSentences.length > 0 ? '.' : '');
         
         // Add assistant message to transcript
         setTranscript(prev => [...prev, { type: 'assistant', text: limitedAnswer }]);
@@ -229,12 +230,13 @@ export default function SessionScreen({ onBack }) {
           utterance.pitch = 1;
           window.speechSynthesis.speak(utterance);
         }
-      } else {
-        const noMatchText = "I couldn't find a matching rule. Try asking about settlements, resources, trading, or building.";
-        setTranscript(prev => [...prev, { type: 'assistant', text: noMatchText }]);
+      } catch (error) {
+        console.error('[SR] Error getting rulebook answer:', error);
+        const errorText = "I had trouble getting an answer. Please try again.";
+        setTranscript(prev => [...prev, { type: 'assistant', text: errorText }]);
         
         if (!isHushedRef.current && 'speechSynthesis' in window) {
-          const utterance = new SpeechSynthesisUtterance(noMatchText);
+          const utterance = new SpeechSynthesisUtterance(errorText);
           utterance.rate = 0.9;
           window.speechSynthesis.speak(utterance);
         }

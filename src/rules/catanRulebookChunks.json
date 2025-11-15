@@ -1,0 +1,59 @@
+[
+  {
+    "id": "catan-victory-points",
+    "gameId": "catan-base",
+    "page": 1,
+    "section": "Objective",
+    "text": "The goal of Catan is to be the first player to reach 10 victory points. Victory points are earned through various means: each settlement is worth 1 victory point, each city is worth 2 victory points. Additionally, the player with the longest continuous road of at least 5 segments earns 2 victory points for the Longest Road card. The player with the largest army of at least 3 knights earns 2 victory points for the Largest Army card. Finally, some development cards are worth 1 victory point each, but these are kept secret until the end of the game."
+  },
+  {
+    "id": "catan-initial-setup",
+    "gameId": "catan-base",
+    "page": 2,
+    "section": "Initial Setup",
+    "text": "During initial setup, players take turns placing their first settlement and connecting road. The starting player places one settlement and one road, then play continues clockwise. After all players have placed their first settlement and road, the last player places a second settlement and road, and play continues counter-clockwise. This ensures fair resource distribution. When placing settlements, they must be at least two road segments apart from any other settlement or city. This distance rule applies throughout the game."
+  },
+  {
+    "id": "catan-resource-production",
+    "gameId": "catan-base",
+    "page": 3,
+    "section": "Resource Production",
+    "text": "On each player's turn, they roll two dice. The sum of the dice determines which terrain hexes produce resources. All hexes showing the rolled number produce resources for all adjacent settlements and cities, unless the robber is on that hex. Settlements receive one resource card of the hex's type, while cities receive two resource cards. If a player has multiple settlements or cities adjacent to the same producing hex, they receive resources for each one. The desert hex never produces resources, regardless of the number rolled."
+  },
+  {
+    "id": "catan-trading",
+    "gameId": "catan-base",
+    "page": 4,
+    "section": "Trading",
+    "text": "Players can trade resources in two ways: with other players or with the bank. Trading with other players can be done at any ratio agreed upon by both parties, and can include any number of resource types. Trading with the bank is done at a 4:1 ratio, meaning you give 4 of the same resource to receive 1 of any other resource. However, if you have a settlement or city on a port, you can trade at better rates. Specialized ports allow 2:1 trading for a specific resource type, while general ports allow 3:1 trading for any resource. Ports are marked on the board and provide significant trading advantages."
+  },
+  {
+    "id": "catan-building-roads",
+    "gameId": "catan-base",
+    "page": 5,
+    "section": "Building Roads",
+    "text": "Roads are built by spending one brick and one wood resource card. Roads must be placed along edges between hexes, and must connect to at least one of your existing roads, settlements, or cities. Roads cannot be built through another player's settlement or city. The longest continuous road of at least 5 segments earns the Longest Road card, worth 2 victory points. If another player builds a longer road, they take the card. Roads are essential for expansion and connecting your settlements across the island."
+  },
+  {
+    "id": "catan-robber-seven",
+    "gameId": "catan-base",
+    "page": 6,
+    "section": "Robber and Rolling a 7",
+    "text": "When a player rolls a 7, several things happen. First, all players with more than 7 resource cards must discard half of their cards (rounded down). Then, the active player moves the robber to any hex on the board, blocking resource production on that hex. Finally, the active player may steal one resource card at random from any player who has a settlement or city adjacent to the hex where the robber was placed. The robber remains on that hex until moved again by another 7 roll. Players cannot move the robber to the hex it currently occupies."
+  },
+  {
+    "id": "catan-development-cards",
+    "gameId": "catan-base",
+    "page": 7,
+    "section": "Development Cards",
+    "text": "Development cards are purchased by spending one sheep, one wheat, and one ore resource card. There are three types of development cards: Knight cards, which allow you to move the robber and steal a resource, Progress cards which provide special abilities, and Victory Point cards which are worth 1 victory point each. Development cards must be played on your turn, except for Victory Point cards which are kept secret until you reach 10 victory points. You can only play one development card per turn, and you cannot play a card on the same turn you purchase it. The player with at least 3 Knight cards played earns the Largest Army card, worth 2 victory points."
+  },
+  {
+    "id": "catan-turn-structure",
+    "gameId": "catan-base",
+    "page": 8,
+    "section": "Turn Structure",
+    "text": "Each player's turn consists of three phases. First, you roll the dice for resource production. Second, you may trade resources with other players or the bank, and you may build roads, settlements, cities, or buy development cards. You can build multiple items in any order during this phase. Third, if you rolled a 7, you handle the robber as described. After completing your turn, play passes to the player on your left. The game continues until one player reaches 10 victory points, at which point they immediately win the game."
+  }
+]
+
