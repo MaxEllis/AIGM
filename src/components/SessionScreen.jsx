@@ -13,6 +13,8 @@ export default function SessionScreen({ onBack }) {
   const isHushedRef = useRef(false);
   const isHoldingRef = useRef(false); // Track if user is holding the button
   const recognitionActiveRef = useRef(false); // Track if recognition is currently active
+  const retryCountRef = useRef(0); // Track retry attempts for network errors
+  const maxRetries = 3; // Maximum retry attempts
 
   // Keep hushed ref in sync for TTS callbacks
   useEffect(() => {
@@ -100,6 +102,7 @@ export default function SessionScreen({ onBack }) {
       recognitionActiveRef.current = true;
       setListening(true);
       setError(null);
+      retryCountRef.current = 0; // Reset retry count on successful start
     };
 
     // Handler: recognition ended
@@ -127,42 +130,71 @@ export default function SessionScreen({ onBack }) {
 
     // Handler: recognition error
     recognitionRef.current.onerror = (event) => {
-      console.log('[SR] onerror:', event.error);
+      console.log('[SR] onerror:', event.error, 'retryCount:', retryCountRef.current);
       recognitionActiveRef.current = false;
       setListening(false);
       
-      // If user is still holding, stop holding state on critical errors
-      if (event.error === 'not-allowed' || event.error === 'audio-capture' || event.error === 'network') {
-        isHoldingRef.current = false;
-      }
-      
       let errorMessage = null;
+      let shouldRetry = false;
+      
       // Only show errors for critical issues, not transient ones
       if (event.error === 'no-speech') {
         // Don't show error for no-speech - it's normal when user doesn't speak
         errorMessage = null;
       } else if (event.error === 'audio-capture') {
         errorMessage = 'Microphone not found or not accessible. Please check your microphone settings.';
+        isHoldingRef.current = false;
       } else if (event.error === 'not-allowed') {
         errorMessage = 'Microphone permission denied. Please allow microphone access in your browser settings and refresh the page.';
+        isHoldingRef.current = false;
       } else if (event.error === 'network') {
-        errorMessage = 'Internet connection required. Speech recognition needs network access.';
+        // Network errors might be transient - try to retry if user is still holding
+        if (isHoldingRef.current && retryCountRef.current < maxRetries) {
+          retryCountRef.current++;
+          console.log('[SR] Network error, retrying...', retryCountRef.current);
+          shouldRetry = true;
+          errorMessage = `Connection issue (retry ${retryCountRef.current}/${maxRetries})...`;
+          
+          // Retry after a short delay
+          setTimeout(() => {
+            if (isHoldingRef.current && recognitionRef.current && !recognitionActiveRef.current) {
+              try {
+                recognitionRef.current.start();
+              } catch (e) {
+                console.error('[SR] Retry failed:', e);
+                if (retryCountRef.current >= maxRetries) {
+                  isHoldingRef.current = false;
+                  setError('Cannot connect to speech recognition service. Check your internet connection or firewall settings.');
+                }
+              }
+            }
+          }, 500);
+        } else {
+          // Max retries reached or user released button
+          isHoldingRef.current = false;
+          retryCountRef.current = 0;
+          errorMessage = 'Cannot connect to speech recognition service. This may be due to:\n• Firewall blocking Google services\n• VPN or network restrictions\n• Regional service limitations\n\nTry refreshing the page or check your network settings.';
+        }
       } else if (event.error === 'aborted') {
         // Don't show error for aborted - it's normal when stopping manually
         errorMessage = null;
+        retryCountRef.current = 0;
       } else {
         // For other errors, show a brief message
         errorMessage = 'Speech recognition unavailable. Please try again.';
+        isHoldingRef.current = false;
       }
       
-      if (errorMessage) {
+      if (errorMessage && !shouldRetry) {
         setError(errorMessage);
-        // Auto-clear error after 5 seconds for network errors
-        if (event.error === 'network') {
-          setTimeout(() => {
+      } else if (errorMessage && shouldRetry) {
+        setError(errorMessage);
+        // Clear retry message after 2 seconds
+        setTimeout(() => {
+          if (retryCountRef.current < maxRetries) {
             setError(null);
-          }, 5000);
-        }
+          }
+        }, 2000);
       } else {
         setError(null);
       }
@@ -251,6 +283,7 @@ export default function SessionScreen({ onBack }) {
 
     isHoldingRef.current = true;
     setError(null);
+    retryCountRef.current = 0; // Reset retry count when starting fresh
 
     // Only start if not already active
     if (!recognitionActiveRef.current) {
