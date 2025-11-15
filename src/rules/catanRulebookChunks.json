@@ -1,59 +1,233 @@
 [
   {
-    "id": "catan-victory-points",
+    "id": "catan-1",
     "gameId": "catan-base",
     "page": 1,
-    "section": "Objective",
-    "text": "The goal of Catan is to be the first player to reach 10 victory points. Victory points are earned through various means: each settlement is worth 1 victory point, each city is worth 2 victory points. Additionally, the player with the longest continuous road of at least 5 segments earns 2 victory points for the Longest Road card. The player with the largest army of at least 3 knights earns 2 victory points for the Largest Army card. Finally, some development cards are worth 1 victory point each, but these are kept secret until the end of the game."
+    "section": "Introduction",
+    "text": "Play any number of Victory Point cards (even on the turn you build them) to win the game. VICTORY POINT\nTHE GAME INTRODUCTION Welcome to the unexplored island of Catan! As you and your fellow explorers gaze across the uninhabited landscape of hexagonal tracts of terrain, you quickly realize that this unique land arrangement provides ample space for each of you to put down roots\n. You race off to establish your respective communities by gathering resources from nearby terrain, building your infrastructure, and nurturing trade relationships\n. Watch out for surprises— your rivals can block your path or send the robber to plunder your wealth! Good luck, explorers! OBJECTIVE The first player to reach 10 victory points (VPs) on their turn wins"
   },
   {
-    "id": "catan-initial-setup",
+    "id": "catan-2",
+    "gameId": "catan-base",
+    "page": 1,
+    "section": "resources you need to build",
+    "text": ". Earn VPs by building. Collect and trade for the resources you need to build.\n\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\n2 VPs each 1 VP each 2 VPs each 1 VP each\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile."
+  },
+  {
+    "id": "catan-3",
     "gameId": "catan-base",
     "page": 2,
-    "section": "Initial Setup",
-    "text": "During initial setup, players take turns placing their first settlement and connecting road. The starting player places one settlement and one road, then play continues clockwise. After all players have placed their first settlement and road, the last player places a second settlement and road, and play continues counter-clockwise. This ensures fair resource distribution. When placing settlements, they must be at least two road segments apart from any other settlement or city. This distance rule applies throughout the game."
+    "section": "resources you need to build",
+    "text": "The first player to play 5 continuous roads receives this tile.  If another player plays more, they immediately receive this tile.\n\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\n4 of 5 v6.250401 1 6 2:1 2:1 2:1 3:1 3:1 3:1 2 1 4 3 3 2\n4 of 5 v6.250401 1 6 2:1 2:1 2:1 3:1 3:1 3:1 2 1 4 3 3 2\n4 of 5 v6.250401 1 6 2:1 2:1 2:1 3:1 3:1 3:1 2 1 4 3 3 2"
   },
   {
-    "id": "catan-resource-production",
+    "id": "catan-4",
+    "gameId": "catan-base",
+    "page": 2,
+    "section": "COMPONENTS",
+    "text": "4 of 5 v6.250401 1 6 2:1 2:1 2:1 3:1 3:1 3:1 2 1 4 3 3 2 COMPONENTS\n\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile."
+  },
+  {
+    "id": "catan-5",
     "gameId": "catan-base",
     "page": 3,
-    "section": "Resource Production",
-    "text": "On each player's turn, they roll two dice. The sum of the dice determines which terrain hexes produce resources. All hexes showing the rolled number produce resources for all adjacent settlements and cities, unless the robber is on that hex. Settlements receive one resource card of the hex's type, while cities receive two resource cards. If a player has multiple settlements or cities adjacent to the same producing hex, they receive resources for each one. The desert hex never produces resources, regardless of the number rolled."
+    "section": "COMPONENTS",
+    "text": "The first player to play 5 continuous roads receives this tile.  If another player plays more, they immediately receive this tile.\n\n3 of 5 v6.250401 H F K L E B N P J C PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game"
   },
   {
-    "id": "catan-trading",
+    "id": "catan-6",
     "gameId": "catan-base",
     "page": 4,
-    "section": "Trading",
-    "text": "Players can trade resources in two ways: with other players or with the bank. Trading with other players can be done at any ratio agreed upon by both parties, and can include any number of resource types. Trading with the bank is done at a 4:1 ratio, meaning you give 4 of the same resource to receive 1 of any other resource. However, if you have a settlement or city on a port, you can trade at better rates. Specialized ports allow 2:1 trading for a specific resource type, while general ports allow 3:1 trading for any resource. Ports are marked on the board and provide significant trading advantages."
+    "section": "COMPONENTS",
+    "text": "3 of 5 v6. 250401 H F K L E B N P J C PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game\n.\n\n. PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game"
   },
   {
-    "id": "catan-building-roads",
+    "id": "catan-7",
+    "gameId": "catan-base",
+    "page": 4,
+    "section": "COMPONENTS",
+    "text": "250401 H F K L E B N P J C PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game\n.  PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game\n.\n\n. PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game"
+  },
+  {
+    "id": "catan-8",
     "gameId": "catan-base",
     "page": 5,
-    "section": "Building Roads",
-    "text": "Roads are built by spending one brick and one wood resource card. Roads must be placed along edges between hexes, and must connect to at least one of your existing roads, settlements, or cities. Roads cannot be built through another player's settlement or city. The longest continuous road of at least 5 segments earns the Longest Road card, worth 2 victory points. If another player builds a longer road, they take the card. Roads are essential for expansion and connecting your settlements across the island."
+    "section": "COMPONENTS",
+    "text": "PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game\n.  PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game\n.\n\n. PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game."
   },
   {
-    "id": "catan-robber-seven",
+    "id": "catan-9",
+    "gameId": "catan-base",
+    "page": 5,
+    "section": "COMPONENTS",
+    "text": "PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game\n.  PLAYER AID Production Phase • Play a development card (optional) • Roll dice • Collect resources or Resolve a 7 Action Phase • In any order (optional): • Trade • Build roads, settlements, cities, and development cards • Play a development card (if you did not play one before the dice roll) TURN OVERVIEW PLAY DEVELOPMENT CARDS • Not on the turn you bought it • Only 1 development card per turn • Before rolling dice or during the Action phase VP card exception: You may play multiple VP cards (even on the turn you buy them) in order to win the game.\n\n3 of 5 v6.250401 VP0 VP1 VPs2 VPs? VP0 VP1 VPs2 VPs? VP0 VP1 VPs2 VPs? Settlement City Development Card Largest Army = 2 VPs Road Longest Route = 2 VPs BUILDING COSTS Settlement City Development Card Largest Army = 2 VPs Road Longest Route = 2 VPs BUILDING COSTS Settlement City Development Card Largest Army = 2 VPs Road Longest Route = 2 VPs BUILDING COSTS Settlement City Development Card Largest Army = 2 VPs Road Longest Route = 2 VPs BUILDING COSTS VP0 VP1 VPs2 VPs"
+  },
+  {
+    "id": "catan-10",
     "gameId": "catan-base",
     "page": 6,
-    "section": "Robber and Rolling a 7",
-    "text": "When a player rolls a 7, several things happen. First, all players with more than 7 resource cards must discard half of their cards (rounded down). Then, the active player moves the robber to any hex on the board, blocking resource production on that hex. Finally, the active player may steal one resource card at random from any player who has a settlement or city adjacent to the hex where the robber was placed. The robber remains on that hex until moved again by another 7 roll. Players cannot move the robber to the hex it currently occupies."
+    "section": "COMPONENTS",
+    "text": "VP0 VP1 VPs2 VPs.  Settlement City Development Card Largest Army = 2 VPs Road Longest Route = 2 VPs BUILDING COSTS Settlement City Development Card Largest Army = 2 VPs Road Longest Route = 2 VPs BUILDING COSTS Settlement City Development Card Largest Army = 2 VPs Road Longest Route = 2 VPs BUILDING COSTS Settlement City Development Card Largest Army = 2 VPs Road Longest Route = 2 VPs BUILDING COSTS VP0 VP1 VPs2 VPs\n.\n\n? 2 dice 6 sea frame pieces 19 terrain hexes18 number discs 16 cities (4x each color) 20 settlements (5x each color) 60 roads (15x each color) 2 bonus victory point (VP) tiles 1 robber 25 development cards 95 resource cards 3x hills4x forests4x pastures 3x mountains4x fields1x desert\nAnnounce one type of resource. Each player must give you all their resource cards of that type. MONOPOLY 2x Monopoly"
   },
   {
-    "id": "catan-development-cards",
+    "id": "catan-11",
     "gameId": "catan-base",
     "page": 7,
-    "section": "Development Cards",
-    "text": "Development cards are purchased by spending one sheep, one wheat, and one ore resource card. There are three types of development cards: Knight cards, which allow you to move the robber and steal a resource, Progress cards which provide special abilities, and Victory Point cards which are worth 1 victory point each. Development cards must be played on your turn, except for Victory Point cards which are kept secret until you reach 10 victory points. You can only play one development card per turn, and you cannot play a card on the same turn you purchase it. The player with at least 3 Knight cards played earns the Largest Army card, worth 2 victory points."
+    "section": "Build 2 roads at no cost",
+    "text": "Build 2 roads at no cost. ROAD BUILDING 2x Road Building\n\nTake any 2 resource cards from the supply. INVENTION 2x Invention\nMove the robber to a new hex. Steal 1 random resource card from a player with a building on that hex. KNIGHT 14x Knight\nPlay any number of Victory Point cards (even on the turn you build them) to win the game. VICTORY POINT 5x Victory Point\n19x orecard back card back 1x 2x 2x2x 2x2x 2x2x 2x1x 2 card trays 4 player aids frontback\n4 3 1 2 4 FIXED SETUP 1 Assemble the Frame Match the numbers at the puzzle piece ends of the sea frame pieces to assemble the coast of Catan. 2 Place the Hexes and Number Discs Place the terrain hexes and number discs inside the frame as shown\n. 3 Create the Supply Sort the resource cards by type and place them in five faceup stacks in the card trays. Shuffle the development cards and place them in a facedown stack in the remaining empty card tray slot\n. Place the Longest Route and Largest Army tiles near the game board. If this is your first time playing CATAN®, we recommend using the setup shown here"
   },
   {
-    "id": "catan-turn-structure",
+    "id": "catan-12",
+    "gameId": "catan-base",
+    "page": 7,
+    "section": "Setup described on page 11",
+    "text": ". For additional variety, check out the Variable Setup described on page 11.\n\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\n5 6 4 Place the Robber and Player Pieces • Place the robber on the desert hex. • Each player selects a color and takes the roads and buildings (settlements and cities) in that color along with a player aid\n. In a 3-player game, do not use the white pieces. • Place 2 starting settlements and roads for each player as shown. 5 Collect Your Starting Resources Each player takes the resource cards from the supply that match the hexes adjacent to their second settlement, highlighted in black"
+  },
+  {
+    "id": "catan-13",
     "gameId": "catan-base",
     "page": 8,
-    "section": "Turn Structure",
-    "text": "Each player's turn consists of three phases. First, you roll the dice for resource production. Second, you may trade resources with other players or the bank, and you may build roads, settlements, cities, or buy development cards. You can build multiple items in any order during this phase. Third, if you rolled a 7, you handle the robber as described. After completing your turn, play passes to the player on your left. The game continues until one player reaches 10 victory points, at which point they immediately win the game."
+    "section": "Setup described on page 11",
+    "text": "• Place 2 starting settlements and roads for each player as shown.  5 Collect Your Starting Resources Each player takes the resource cards from the supply that match the hexes adjacent to their second settlement, highlighted in black\n.\n\n. Keep these cards hidden in your hand. 6 Choose the First Player Each player rolls the dice. The player with the highest roll is the first player.\nPRODUCTION PHASE PLAY A DEVELOPMENT CARD If you have development cards, you may play one of them before rolling the dice. See “Development Cards” on page 9\n. ROLL DICE Roll both dice and add them together. This total determines which hexes produce resources this turn. COLLECT RESOURCES Hexes with a number disc matching the dice roll produce this turn\n. Each player with a settlement on a producing hex receives 1 resource card of the corresponding type from the supply. If a player has 2 or 3 settlements on that hex, they receive 1 resource card for each settlement\n. Similarly, a player receives 2 resource cards for each of their cities on that hex. If there are not enough resource cards in the supply to fulfill everyone’s production, then no one receives any of that resource"
+  },
+  {
+    "id": "catan-14",
+    "gameId": "catan-base",
+    "page": 8,
+    "section": "Setup described on page 11",
+    "text": "Similarly, a player receives 2 resource cards for each of their cities on that hex.  If there are not enough resource cards in the supply to fulfill everyone’s production, then no one receives any of that resource\n.\n\n. However, if only one player is affected, give that player as many of those resource cards as remain in the supply. TURN OVERVIEW CATAN is played over a series of turns, starting with the first player, and moving clockwise around the table\n. A turn consists of two phases, which occur in this order: 1. Production phase 2. Action phase Once you have finished the Action phase, if you have not won, pass the dice to the player on your left\n. They begin their turn with the Production phase. RULES Example: The White player rolls an 8. Blue has a settlement on the mountain hex with the number 8 disc, so Blue receives 1 ore resource card\n. Orange receives 2 ore for their city on that hex. RESOLVE A 7 When you roll a 7, hexes do not produce any resources. Instead: 1. DISCARD RESOURCES Each player who has more than 7 resource cards must choose half (rounded down) of their resource cards and return them to the supply"
+  },
+  {
+    "id": "catan-15",
+    "gameId": "catan-base",
+    "page": 9,
+    "section": "Setup described on page 11",
+    "text": "Instead: 1.  DISCARD RESOURCES Each player who has more than 7 resource cards must choose half (rounded down) of their resource cards and return them to the supply\n.\n\n. Example: White has 9 resource cards in hand. When a 7 is rolled, they must discard 4 cards. 2. ACTIVATE THE ROBBER You must move the robber to a new hex\n. Steal 1 random resource card from a player who has a building on that hex. If multiple players have buildings on the new hex, you choose one player to rob\n. Important: A hex with the robber does not produce resources when its number is rolled. Example: Orange rolls a 7. They move the robber to the pasture hex with a red settlement and a blue city\n. Orange chooses to steal a card from Blue and takes a random card without looking. Forests produce wood Hills produce brick Pastures produce wool Mountains produce ore Fields produce wheat The desert produces nothing\nACTION PHASE You may take actions in this phase as often as you like and in any order, as long as you have the resources to do so. TRADE You may trade freely with other players and the supply to get the resources you need to build"
+  },
+  {
+    "id": "catan-16",
+    "gameId": "catan-base",
+    "page": 10,
+    "section": "Setup described on page 11",
+    "text": "Forests produce wood Hills produce brick Pastures produce wool Mountains produce ore Fields produce wheat The desert produces nothing\nACTION PHASE You may take actions in this phase as often as you like and in any order, as long as you have the resources to do so.  TRADE You may trade freely with other players and the supply to get the resources you need to build\n.\n\n. During your turn, other players may only trade with you, not with each other or with the supply. There are three types of trades you may perform: TRADE WITH OTHER PLAYERS To trade with other players, announce which resource(s) you want and which resource(s) you are willing to trade\n. Other players may accept your proposal, make counteroffers, or make their own proposals. Important: You may not give away cards in any way, which includes trading matching resource cards (for example, trying to trade 3 ore for 1 ore is not allowed)\n. PORT TRADE WITH THE SUPPLY (3:1 OR 2:1) If you have a building on a 3:1 port, you may put 3 of the same resource cards into the supply and take 1 card of a different resource from the supply"
+  },
+  {
+    "id": "catan-17",
+    "gameId": "catan-base",
+    "page": 10,
+    "section": "Setup described on page 11",
+    "text": "Important: You may not give away cards in any way, which includes trading matching resource cards (for example, trying to trade 3 ore for 1 ore is not allowed)\n.  PORT TRADE WITH THE SUPPLY (3:1 OR 2:1) If you have a building on a 3:1 port, you may put 3 of the same resource cards into the supply and take 1 card of a different resource from the supply\n.\n\n. If you have a building on a 2:1 port, you may put 2 of the resource cards shown on the port into the supply and take 1 card of a different resource from the supply\n. Example: It is Blue’s turn. They choose to trade 4 wood for 1 ore. Example: It is Blue’s turn, and they want 1 wheat. Orange will trade 1 wheat and wants 1 wool in return\n. Blue agrees and the players exchange cards. White also wants to trade for 1 wool, but Blue no longer has any. White may not trade with Orange because it is not Orange’s turn\n. GENERAL TRADE WITH THE SUPPLY (4:1) To trade with the supply, put 4 of the same resource cards into the supply and take 1 card of a different resource from the supply"
+  },
+  {
+    "id": "catan-18",
+    "gameId": "catan-base",
+    "page": 11,
+    "section": "Setup described on page 11",
+    "text": "White may not trade with Orange because it is not Orange’s turn\n.  GENERAL TRADE WITH THE SUPPLY (4:1) To trade with the supply, put 4 of the same resource cards into the supply and take 1 card of a different resource from the supply\n.\n\n. Example: White wants 1 ore. On their turn, they may not trade 2 wheat for 1 ore because they do not have a building on the 2:1 wheat port. However, they may trade 3 wood for 1 ore because they have a settlement built on a 3:1 port.\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\nBUILDING COST: BUILDING COST: BUILD Roads, buildings (settlements and cities), and development cards each have different costs. During your turn, you may spend resources (aka “build”) to place roads and buildings on the board, as well as to take development cards from the supply"
+  },
+  {
+    "id": "catan-19",
+    "gameId": "catan-base",
+    "page": 11,
+    "section": "Setup described on page 11",
+    "text": "BUILDING COST: BUILDING COST: BUILD Roads, buildings (settlements and cities), and development cards each have different costs.  During your turn, you may spend resources (aka “build”) to place roads and buildings on the board, as well as to take development cards from the supply\n.\n\n. To do so, simply return the required resource cards from your hand to the supply. ROADS Roads are worth 0 VP. Roads are placed on empty hex edges. A new road must connect to one of your existing roads or buildings\n. You may not build a road starting on the other side of an opponent’s building. SETTLEMENTS Settlements are worth 1 VP. Settlements are placed on empty intersections\n. A new settlement must follow the Distance Rule and must connect to at least one of your existing roads. You have 5 settlement pieces. To continue building more settlements, you must first upgrade one to a city\n. Longest Route The first player to have 5 continuous roads in play receives this tile. If another player has more continuous roads in play, they immediately receive this tile"
+  },
+  {
+    "id": "catan-20",
+    "gameId": "catan-base",
+    "page": 12,
+    "section": "Setup described on page 11",
+    "text": "Longest Route The first player to have 5 continuous roads in play receives this tile.  If another player has more continuous roads in play, they immediately receive this tile\n.\n\n. The Longest Route tile is worth 2 VPs. If, when a player’s route is broken (see example), they no longer meet the requirements for the Longest Route, the tile is returned to the supply\n. It remains in the supply until a single player has the longest continuous route of at least 5 roads. That player immediately receives the bonus tile and the 2 VPs\n. The Distance Rule: When placing a settlement, stay at least two edges away from all other buildings! Example: Orange may place a settlement on the intersections with a check mark\n. Example: Red has a continuous route of 7 roads and the Longest Route tile. White has a continuous route of 6 roads. On White’s turn, they build a settlement at the intersection shown, breaking Red’s route into a four-segment route and a three-segment route"
+  },
+  {
+    "id": "catan-21",
+    "gameId": "catan-base",
+    "page": 13,
+    "section": "Setup described on page 11",
+    "text": "White has a continuous route of 6 roads.  On White’s turn, they build a settlement at the intersection shown, breaking Red’s route into a four-segment route and a three-segment route\n.\n\n. Since White now has the longest route, they receive the tile and the 2 VPs. Example: Blue may place a road on any of the edges with a check mark. They may not place a road on the edge with an “X” because they may not build on the other side of Orange’s settlement.\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile."
+  },
+  {
+    "id": "catan-22",
+    "gameId": "catan-base",
+    "page": 13,
+    "section": "resource cards from the supply",
+    "text": "Take any 2 resource cards from the supply. INVENTION\n\nAnnounce one type of resource. Each player must give you all their resource cards of that type. MONOPOLY"
+  },
+  {
+    "id": "catan-23",
+    "gameId": "catan-base",
+    "page": 14,
+    "section": "Build 2 roads at no cost",
+    "text": "Build 2 roads at no cost. ROAD BUILDING\n\nPlay any number of Victory Point cards (even on the turn you build them) to win the game. VICTORY POINT\nMove the robber to a new hex. Steal 1 random resource card from a player with a building on that hex. KNIGHT\nMove the robber to a new hex. Steal 1 random resource card from a player with a building on that hex. KNIGHT\nMove the robber to a new hex. Steal 1 random resource card from a player with a building on that hex. KNIGHT\nMove the robber to a new hex. Steal 1 random resource card from a player with a building on that hex. KNIGHT BUILDING COST: BUILDING COST: When you play this card, announce one type of resource\n. Each player must give you all their resource cards of that type. You may only request one type of resource when you play this card, regardless of how many cards you receive\n. Monopoly When you play this card, build 2 roads at no cost (i.e., without spending any resource cards). When you play a Knight card, you must “Activate the Robber” (see page 6)"
+  },
+  {
+    "id": "catan-24",
+    "gameId": "catan-base",
+    "page": 14,
+    "section": "Build 2 roads at no cost",
+    "text": ", without spending any resource cards).  When you play a Knight card, you must “Activate the Robber” (see page 6)\n.\n\n. Reveal all your Victory Point cards, including any built this turn, if you can reach the number of VPs needed to win. Otherwise, you must keep Victory Point cards hidden in your player area\n. When you play this card, take any 2 resource cards from the supply. Add them to your hand. They may be 2 of the same resource or 2 different resources\n. Invention Road BuildingVictory Point Knight Largest Army The first player to have 3 Knight cards in play receives this tile. If another player has more Knight cards in play, they immediately receive this tile\n. The Largest Army tile is worth 2 VPs. CITIES Cities are worth 2 VPs. Cities always replace settlements. To build a city, remove one of your settlements from the board, return it to your player area, and place your city where the settlement was located\n. You have 4 cities and may not build more. DEVELOPMENT CARDS When you build a development card, draw the top card of the deck. Development cards stay hidden until used"
+  },
+  {
+    "id": "catan-25",
+    "gameId": "catan-base",
+    "page": 15,
+    "section": "Build 2 roads at no cost",
+    "text": "DEVELOPMENT CARDS When you build a development card, draw the top card of the deck.  Development cards stay hidden until used\n.\n\n. They do not count toward the number of cards in your hand when a 7 is rolled, and the robber may not steal them. You may play 1 development card during your turn by placing it face up in your player area\n. It may not be a card you built this turn. You may play a development card before rolling dice or at any time during the Action phase. Development cards never go back into the supply\n. If the supply runs out, you may not build any more cards. You may not trade or give away development cards.\n10 Built Points Earned 12 VPs 33 VPs 8 continuous0 VPs VP Cards 11 VPs Knights 1 played0 VPs TOTAL 6 VPs Built Points Earned 12 VPs 44 VPs 7 continuous0 VPs VP Cards 00 VPs Knights 5 played2 VPs TOTAL 8 VPs Built Points Earned 24 VPs 33 VPs 14 continuous2 VPs VP Cards 11 VPs Knights 3 played0 VPs TOTAL 10 VPs Built Points Earned 24 VPs 44 VPs 7 continuous0 VPs VP Cards 00 VPs Knights 2 played0 VPs TOTAL 8 VPs"
+  },
+  {
+    "id": "catan-26",
+    "gameId": "catan-base",
+    "page": 16,
+    "section": "Build 2 roads at no cost",
+    "text": "You may not trade or give away development cards. \n10 Built Points Earned 12 VPs 33 VPs 8 continuous0 VPs VP Cards 11 VPs Knights 1 played0 VPs TOTAL 6 VPs Built Points Earned 12 VPs 44 VPs 7 continuous0 VPs VP Cards 00 VPs Knights 5 played2 VPs TOTAL 8 VPs Built Points Earned 24 VPs 33 VPs 14 continuous2 VPs VP Cards 11 VPs Knights 3 played0 VPs TOTAL 10 VPs Built Points Earned 24 VPs 44 VPs 7 continuous0 VPs VP Cards 00 VPs Knights 2 played0 VPs TOTAL 8 VPs\n.\n\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile."
+  },
+  {
+    "id": "catan-27",
+    "gameId": "catan-base",
+    "page": 16,
+    "section": "Build 2 roads at no cost",
+    "text": "The first player to play 5 continuous roads receives this tile.  If another player plays more, they immediately receive this tile.\n\nWINNING THE GAME If you have 10 or more VPs at any point during your turn, the game ends immediately and you are the winner! Turn over any number of Victory Point cards, including ones built this turn, to show that you have reached 10 VPs\n. Congratulations! Example: Blue ends the game on their turn with 10 VPs (2 cities, 3 settlements, the Longest Route tile, and 1 Victory Point card). Victory\n! Red finished with 8 VPs. Orange also finished with 8 VPs. White finished with 6 VPs.\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\n5 of 5 v6.250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile. If another player plays more Knight cards, they immediately receive this tile"
+  },
+  {
+    "id": "catan-28",
+    "gameId": "catan-base",
+    "page": 17,
+    "section": "Build 2 roads at no cost",
+    "text": "250401 LARGEST ARMY LONGEST ROUTE The first player to play 3 Knight cards receives this tile.  If another player plays more Knight cards, they immediately receive this tile\n.\n\n. The first player to play 5 continuous roads receives this tile. If another player plays more, they immediately receive this tile.\nVARIABLE SETUP Level up your game! The variable setup provides the full CATAN experience. Here’s how: 1 Assemble the Frame Shuffle and connect the puzzle piece ends of the sea frame pieces to assemble the coast of Catan\n. 2 Place the Hexes Randomly place the hexes face up inside the frame. 3 Place the Number Discs Arrange the discs face down in A-B-C order. Starting in any corner of the board, place the number discs on the hexes counterclockwise, skipping the desert\n. Then turn them over so the number side is faceup. 4 Place the Robber Place the robber on the desert hex. VARIABLE SETUP 5 Create the Supply Sort the resource cards by type and place them in five faceup stacks in the card trays\n. Shuffle the development cards and place them in a facedown stack in the remaining empty card tray slot. Place the Longest Route and Largest Army tiles near the game board."
+  },
+  {
+    "id": "catan-29",
+    "gameId": "catan-base",
+    "page": 17,
+    "section": "Build 2 roads at no cost",
+    "text": "Shuffle the development cards and place them in a facedown stack in the remaining empty card tray slot.  Place the Longest Route and Largest Army tiles near the game board.\n\n3 2 1 5 Example: If the players’ 2nd settlements are the ones shown to the left, they would collect the resources shown below: 8 7 6 Designed by: (1952-2023) Ongoing design: Benjamin Teuber Development team: Jasmin Balle, Arnd Beenen, Morgan Dontanville, Arnd Fischer, Bianca Freund, and Sonja Krützfeldt Art: Quentin Regnes (cover), Eric Hibbeler with assistance from Kin Wald (interior) Graphic design: Az Sperry (ENG), Michaela Kienle (GER) 3D Graphics: Alex Colón Hernández Lead editor & rules redesign for 6th Edition (ENG): Anne Reynolds Lead editor & rules redesign for 6th Edition (GER): Tina Landwehr-Rödde Editor of 1st Edition: Reiner Müller Producer: Ron Magin Special thanks: Brea Blankenfeld, Sebastian Castro Casas, Nadine Fiedler, Caroline Fischer, Kevin Hovdestad, Riley Jouppi, Aud Ketilsdatter (LSKC/345-2), Stephanie Newman, Donna Prior, Sabrina Risch, Kelli Schmitz, and especially Guido Teuber Technical editing/proofreading support (ENG): Steven Kimball, Jason D"
+  },
+  {
+    "id": "catan-30",
+    "gameId": "catan-base",
+    "page": 18,
+    "section": "Build 2 roads at no cost",
+    "text": "Place the Longest Route and Largest Army tiles near the game board. \n\n3 2 1 5 Example: If the players’ 2nd settlements are the ones shown to the left, they would collect the resources shown below: 8 7 6 Designed by: (1952-2023) Ongoing design: Benjamin Teuber Development team: Jasmin Balle, Arnd Beenen, Morgan Dontanville, Arnd Fischer, Bianca Freund, and Sonja Krützfeldt Art: Quentin Regnes (cover), Eric Hibbeler with assistance from Kin Wald (interior) Graphic design: Az Sperry (ENG), Michaela Kienle (GER) 3D Graphics: Alex Colón Hernández Lead editor & rules redesign for 6th Edition (ENG): Anne Reynolds Lead editor & rules redesign for 6th Edition (GER): Tina Landwehr-Rödde Editor of 1st Edition: Reiner Müller Producer: Ron Magin Special thanks: Brea Blankenfeld, Sebastian Castro Casas, Nadine Fiedler, Caroline Fischer, Kevin Hovdestad, Riley Jouppi, Aud Ketilsdatter (LSKC/345-2), Stephanie Newman, Donna Prior, Sabrina Risch, Kelli Schmitz, and especially Guido Teuber Technical editing/proofreading support (ENG): Steven Kimball, Jason D\n.\n\n. Kingsley Production team (US): Justin Anger, Emily Frenchik, Estelle Gavin, Chris Jensen, and Austin Litzler Head of CATAN Studio: Pete Fenlon You have purchased a game of the highest quality"
+  },
+  {
+    "id": "catan-31",
+    "gameId": "catan-base",
+    "page": 19,
+    "section": "Build 2 roads at no cost",
+    "text": "3 2 1 5 Example: If the players’ 2nd settlements are the ones shown to the left, they would collect the resources shown below: 8 7 6 Designed by: (1952-2023) Ongoing design: Benjamin Teuber Development team: Jasmin Balle, Arnd Beenen, Morgan Dontanville, Arnd Fischer, Bianca Freund, and Sonja Krützfeldt Art: Quentin Regnes (cover), Eric Hibbeler with assistance from Kin Wald (interior) Graphic design: Az Sperry (ENG), Michaela Kienle (GER) 3D Graphics: Alex Colón Hernández Lead editor & rules redesign for 6th Edition (ENG): Anne Reynolds Lead editor & rules redesign for 6th Edition (GER): Tina Landwehr-Rödde Editor of 1st Edition: Reiner Müller Producer: Ron Magin Special thanks: Brea Blankenfeld, Sebastian Castro Casas, Nadine Fiedler, Caroline Fischer, Kevin Hovdestad, Riley Jouppi, Aud Ketilsdatter (LSKC/345-2), Stephanie Newman, Donna Prior, Sabrina Risch, Kelli Schmitz, and especially Guido Teuber Technical editing/proofreading support (ENG): Steven Kimball, Jason D\n.  Kingsley Production team (US): Justin Anger, Emily Frenchik, Estelle Gavin, Chris Jensen, and Austin Litzler Head of CATAN Studio: Pete Fenlon You have purchased a game of the highest quality\n.\n\n. However, if you find any components missing or damaged, please visit: catanstudio.com/support For all other inquiries, contact us at: info@catanstudio.com Copyright and CATAN Studio"
+  },
+  {
+    "id": "catan-32",
+    "gameId": "catan-base",
+    "page": 19,
+    "section": "Build 2 roads at no cost",
+    "text": "com/support For all other inquiries, contact us at: info@catanstudio. com Copyright and CATAN Studio\n.\n\n. CATAN, the “CATAN Sun,” the CATAN Brand logo, and the CATAN Hex Icon —and all other marks herein—are trademarks of CATAN GmbH (catan.com) in various territories of the world and are used under license from CATAN GmbH\n. “Gamegenic” and the “Gamegenic logo” are TM & © Gamegenic GmbH, Germany. All rights reserved. Published by CATAN Studio, 1995 W. County Rd. B2, Roseville, MN 55113 USA\n. Phone +1.651.639.1905. 7 Place Your Starting Pieces 8 Collect Your Starting Resources Each player takes 1 matching resource card from the supply for each hex adjacent to their second settlement\n. Keep these resource cards hidden in your hand. ROUND 2 Starting with the last player and going in reverse order, each player places 1 settlement on an empty intersection of their choice and their second road on an empty adjacent edge\n. As before, when placing a settlement, stay two edges away from all other settlements. ROUND 1 The first player places 1 settlement on an empty intersection of their choice"
+  },
+  {
+    "id": "catan-33",
+    "gameId": "catan-base",
+    "page": 20,
+    "section": "Build 2 roads at no cost",
+    "text": "As before, when placing a settlement, stay two edges away from all other settlements.  ROUND 1 The first player places 1 settlement on an empty intersection of their choice\n.\n\n. Then they place 1 road on an empty edge next to that settlement. The next player to the left does the same until all players have 1 settlement and 1 road on the board\n. Important: When placing a settlement, stay two edges away from all other settlements. CREDITS 6 Choose the First Player Each player rolls the dice. The player with the highest roll is the first player\n. Then each player selects a color and takes the roads and buildings (settlements and cities) in that color along with a player aid. Studio ™ catanstudio.com ® catan.com"
   }
 ]
-
