@@ -21,9 +21,46 @@ export default function SessionScreen({ onBack }) {
 
   // Initialize Web Speech API once
   useEffect(() => {
+    // Check HTTPS requirement
+    const isSecureContext = window.isSecureContext || location.protocol === 'https:' || location.hostname === 'localhost' || location.hostname === '127.0.0.1';
+    
     // Detect mobile device
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
     const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+    
+    // Detect browser
+    const isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
+    const isEdge = /Edg/.test(navigator.userAgent);
+    const isSafari = /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
+    const isFirefox = /Firefox/.test(navigator.userAgent);
+    
+    console.log('[SR] Diagnostics:', {
+      isSecureContext,
+      protocol: location.protocol,
+      hostname: location.hostname,
+      isChrome,
+      isEdge,
+      isSafari,
+      isFirefox,
+      hasSpeechRecognition: !!window.SpeechRecognition,
+      hasWebkitSpeechRecognition: !!window.webkitSpeechRecognition
+    });
+    
+    // Check HTTPS requirement
+    if (!isSecureContext) {
+      console.error('[SR] Not a secure context - HTTPS required');
+      setSpeechSupported(false);
+      setError('Speech recognition requires HTTPS. Please use https:// or localhost.');
+      return;
+    }
+    
+    // Check browser compatibility
+    if (isFirefox) {
+      console.error('[SR] Firefox does not support Web Speech API');
+      setSpeechSupported(false);
+      setError('Firefox does not support voice input. Please use Chrome, Edge, or Safari.');
+      return;
+    }
     
     // Detect Web Speech API support
     if (!window.SpeechRecognition && !window.webkitSpeechRecognition) {
@@ -35,7 +72,7 @@ export default function SessionScreen({ onBack }) {
       } else if (isMobile) {
         setError('Voice input may not work on mobile browsers. Try Rules Help to search for rules.');
       } else {
-        setError('Speech recognition is not available in this browser.');
+        setError('Speech recognition is not available in this browser. Try Chrome, Edge, or Safari.');
       }
       return;
     }
@@ -196,10 +233,19 @@ export default function SessionScreen({ onBack }) {
 
   // Start listening function
   const startListening = () => {
-    console.log('[SR] startListening() called, recognitionActive:', recognitionActiveRef.current);
+    console.log('[SR] startListening() called', {
+      speechSupported,
+      recognitionActive: recognitionActiveRef.current,
+      hasRecognition: !!recognitionRef.current,
+      isSecureContext: window.isSecureContext || location.protocol === 'https:' || location.hostname === 'localhost'
+    });
     
     if (!speechSupported || !recognitionRef.current) {
-      setError('Speech recognition is not available in this browser.');
+      const errorMsg = !recognitionRef.current 
+        ? 'Speech recognition not initialized. Please refresh the page.'
+        : 'Speech recognition is not available in this browser.';
+      setError(errorMsg);
+      console.error('[SR] Cannot start:', errorMsg);
       return;
     }
 
@@ -209,16 +255,21 @@ export default function SessionScreen({ onBack }) {
     // Only start if not already active
     if (!recognitionActiveRef.current) {
       try {
+        console.log('[SR] Calling recognition.start()...');
         recognitionRef.current.start();
+        console.log('[SR] recognition.start() called successfully');
       } catch (e) {
-        console.error('[SR] start() error:', e);
+        console.error('[SR] start() error:', e, e.message, e.name);
         // Handle "already started" error gracefully
-        if (e.message && e.message.includes('already started')) {
+        if (e.message && (e.message.includes('already started') || e.message.includes('started'))) {
           console.log('[SR] Recognition already started, continuing...');
           recognitionActiveRef.current = true;
           setListening(true);
+        } else if (e.name === 'InvalidStateError' || e.message.includes('not allowed')) {
+          setError('Microphone permission required. Please allow microphone access and refresh.');
+          isHoldingRef.current = false;
         } else {
-          setError('Could not start listening: ' + e.message);
+          setError('Could not start listening: ' + (e.message || e.toString()));
           isHoldingRef.current = false;
         }
       }
@@ -284,14 +335,19 @@ export default function SessionScreen({ onBack }) {
 
       <div className="mic-container">
         {error && !speechSupported && (
-          <p className="mic-error" style={{ color: '#888', fontSize: '0.9rem', marginBottom: '1rem', textAlign: 'center' }}>
+          <p className="mic-error" style={{ color: '#ff6b6b', fontSize: '0.9rem', marginBottom: '1rem', textAlign: 'center', padding: '0.5rem', backgroundColor: '#1a1a1a', borderRadius: '4px' }}>
             {error}
           </p>
         )}
         {error && speechSupported && (
-          <p className="mic-error" style={{ color: '#888', fontSize: '0.85rem', marginBottom: '0.5rem', textAlign: 'center' }}>
+          <p className="mic-error" style={{ color: '#ff6b6b', fontSize: '0.85rem', marginBottom: '0.5rem', textAlign: 'center', padding: '0.5rem', backgroundColor: '#1a1a1a', borderRadius: '4px' }}>
             {error}
           </p>
+        )}
+        {process.env.NODE_ENV === 'development' && (
+          <div style={{ fontSize: '0.7rem', color: '#555', marginBottom: '0.5rem', textAlign: 'center' }}>
+            Protocol: {location.protocol} | Browser: {navigator.userAgent.includes('Chrome') ? 'Chrome' : navigator.userAgent.includes('Firefox') ? 'Firefox' : navigator.userAgent.includes('Safari') ? 'Safari' : 'Other'} | Secure: {window.isSecureContext ? 'Yes' : 'No'}
+          </div>
         )}
         <button
           type="button"
